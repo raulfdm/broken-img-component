@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/image": "0.17.1",
-    "astro": "2.7.1"
+    "astro": "2.7.1",
+    "sharp": "0.32.1"
   }
 }
