@@ -1,5 +1,7 @@
 ---
   import { Picture, Image } from '@astrojs/image/components';
+  import { Picture as Picture16, Image as Image16 } from '@astrojs/image16/components';
+
 
   let imgSrc = 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'
   let width = 272
@@ -7,33 +9,31 @@
   let alt = 'Google Logo'
 ---
 
-<img
+<div>
+<section>
+  <h2>Standard html img</h2>
+  <img
   src={imgSrc}
   width={width}
   height={height}
   alt={alt}
 />
-  
-<Image
-  src={imgSrc}
-  width={width}
-  height={height}
-  alt={alt}
-/>
+</section>
 
-<Picture
-  fit="cover"
+<section>
+  <h2>@astrojs/image@0.17.1</h2>
+ <section>
+  <h3>Image Component</h3>
+  <Image
   src={imgSrc}
-  loading="eager"
-  widths={[200, 400, 640, 768, 1037, 1248]}
-  sizes="(min-width: 1248px) 1248px, 100vw"
-  aspectRatio={12 / 6}
   width={width}
   height={height}
   alt={alt}
 />
-
-<Picture
+</section>
+<section>
+  <h3>Picture Component</h3>
+  <Picture
   fit="cover"
   src={imgSrc}
   alt={alt}
@@ -43,3 +43,33 @@
   width={width}
   height={height}
 />
+</section>
+ </section>
+
+ <section>
+  <h2>@astrojs/image@0.16.9</h2>
+ <section>
+  <h3>Image Component</h3>
+  <Image16
+  src={imgSrc}
+  width={width}
+  height={height}
+  alt={alt}
+/>
+
+</section>
+<section>
+  <h3>Picture Component</h3>
+  <Picture16
+  fit="cover"
+  src={imgSrc}
+  alt={alt}
+  loading="eager"
+  widths={[200]}
+  aspectRatio={12 / 6}
+  width={width}
+  height={height}
+/>
+</section>
+ </section>
+</div>

@@ -8,6 +8,9 @@ dependencies:
   '@astrojs/image':
     specifier: 0.17.1
     version: 0.17.1(astro@2.7.1)(sharp@0.32.1)
+  '@astrojs/image16':
+    specifier: npm:@astrojs/image@0.16.9
+    version: /@astrojs/image@0.16.9(astro@2.7.1)(sharp@0.32.1)
   astro:
     specifier: 2.7.1
     version: 2.7.1(sharp@0.32.1)
@@ -31,6 +34,25 @@ packages:
 
   /@astrojs/compiler@1.5.2:
     resolution: {integrity: sha512-EZ3d5UTqN71N2zE3VdzVJeM+dM+pu0wV/jOi6g2VDU21LQTWozafsFMpbcLE/ksmTmbQM90/Tnn19/IR9fWGUw==}
+    dev: false
+
+  /@astrojs/image@0.16.9(astro@2.7.1)(sharp@0.32.1):
+    resolution: {integrity: sha512-8RfGGd1MAIQ6xCHgmu+xXBKWE14gvWYcIv61PxWlToEBgMUbmFdN5ICBQ1bea24rx6o5WvsvRjfOnkjPpf2eew==}
+    peerDependencies:
+      astro: ^2.5.0
+      sharp: '>=0.31.0'
+    peerDependenciesMeta:
+      sharp:
+        optional: true
+    dependencies:
+      '@altano/tiny-async-pool': 1.0.2
+      astro: 2.7.1(sharp@0.32.1)
+      http-cache-semantics: 4.1.1
+      image-size: 1.0.2
+      kleur: 4.1.5
+      magic-string: 0.27.0
+      mime: 3.0.0
+      sharp: 0.32.1
     dev: false
 
   /@astrojs/image@0.17.1(astro@2.7.1)(sharp@0.32.1):
